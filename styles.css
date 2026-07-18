@@ -39,7 +39,7 @@ a:focus-visible, .button:focus-visible { outline: 3px solid #ffbf47; outline-off
 
 .site-header { min-height: 88px; border-bottom: 1px solid var(--line); }
 .brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 750; text-decoration: none; }
-.brand-mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 13px; color: #fff; background: var(--brand); font-size: 14px; letter-spacing: .04em; }
+.brand-icon { display: block; width: 48px; height: 48px; border-radius: 13px; }
 nav { display: flex; gap: 24px; }
 nav a { color: var(--muted); font-size: 15px; font-weight: 650; text-decoration: none; }
 nav a[aria-current="page"] { color: var(--ink); }
