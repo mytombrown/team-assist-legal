@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Squishy Word Climb privacy policy. Nothing leaves your phone.">
+  <title>Privacy Policy | Squishy Word Climb</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/squishy-words/privacy/" aria-label="Squishy Word Climb">
+      <span>Squishy Word Climb</span>
+    </a>
+    <nav aria-label="Pages">
+      <a aria-current="page" href="/squishy-words/privacy/">Privacy</a>
+      <a href="/">Legal home</a>
+    </nav>
+  </header>
+
+  <main class="document-layout">
+    <aside class="document-summary" aria-label="Policy summary">
+      <p class="eyebrow">Privacy policy</p>
+      <h1>Squishy Word Climb — Privacy Policy</h1>
+      <p>Effective September 12, 2026. Applies to the Squishy Word Climb iPhone app (shown on the phone as "Squishy Words", <code>com.mytombrown.squishywordclimb</code>) by Tom Brown.</p>
+      <div class="summary-note">
+        <strong>The short version</strong>
+        <ul>
+          <li><strong>Nothing leaves your phone.</strong> The app has no internet connection of any kind.</li>
+          <li><strong>No accounts. No sign-in. No ads. No tracking. No analytics.</strong></li>
+          <li><strong>What it remembers stays on the device</strong>, and deleting the app deletes it.</li>
+          <li><strong>The camera reads a spelling list, on the phone, and the photo is not kept.</strong></li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="document-content">
+      <section>
+        <h2>What the app stores, and where</h2>
+        <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent anywhere.</p>
+        <table>
+          <thead>
+            <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Saved players: name, age, chosen squishy and colour, coins, lifetime points and game stats, unlocked squishies and colours, achievements earned</td>
+              <td>So each kid keeps their coins, shop unlocks and badges between games</td>
+              <td><code>SquishyKit/Sources/SquishyKit/Game/ProfileStore.swift</code></td>
+            </tr>
+            <tr>
+              <td>Spelling lists: a list name, the words, and the last score per list, per player</td>
+              <td>So this week's words are there for the next test</td>
+              <td><code>SquishyWordClimb/Models/SpellingList.swift</code></td>
+            </tr>
+            <tr>
+              <td>Which words a player has missed, and how often</td>
+              <td>So missed words come first next time</td>
+              <td><code>SquishyWordClimb/Models/SpellingList.swift</code></td>
+            </tr>
+            <tr>
+              <td>Spelling tests finished and perfect tests, per player</td>
+              <td>So the test badges can be earned</td>
+              <td><code>SquishyWordClimb/Game/Achievements.swift</code></td>
+            </tr>
+            <tr>
+              <td>Sound on/off</td>
+              <td>To remember the speaker toggle</td>
+              <td><code>SquishyKit/Sources/SquishyKit/Game/SoundKit.swift</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>A name is whatever a grown-up types — a first name, a nickname, or nothing (the app then says "Player"). An age is a number from 4 to 12 used only to pick which words the child sees. A spelling list is whatever words are typed or read off a photo.</p>
+      </section>
+
+      <section>
+        <h2>The camera and photos</h2>
+        <ul>
+          <li>The app asks for the <strong>camera</strong> only when you tap "Take a picture" on a spelling list. It uses the phone's own camera screen to take one photo.</li>
+          <li>"Photo" opens the phone's own photo picker. The app sees only the one picture you choose, and iOS does not ask it for permission to your whole library.</li>
+          <li>The words are read off the picture <strong>on the phone</strong>, using Apple's built-in text recognition (Vision). Nothing is uploaded.</li>
+          <li><strong>The photo is not saved.</strong> The app keeps the words it found, in the list you are editing, and drops the picture. It does not write photos to your library or anywhere else.</li>
+          <li>If you never use the picture button, the app never asks for the camera.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Reading words aloud</h2>
+        <p>Spelling Test says each word with the phone's built-in voice (Apple's speech synthesizer). It runs on the phone and needs no internet. While a test is running the voice plays even if the silent switch is on, so the word can be heard; the app does not use the microphone and never asks for it.</p>
+      </section>
+
+      <section>
+        <h2>What the app does NOT do</h2>
+        <ul>
+          <li><strong>No network.</strong> There is no networking code in the app. Nothing is uploaded, downloaded, synced or backed up by the app itself. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
+          <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
+          <li><strong>No other permissions.</strong> The app never asks for the microphone, location, contacts, notifications, or your whole photo library.</li>
+          <li><strong>No purchases, no links out, no web views.</strong> Nothing in the app opens a browser or a store. Coins are earned by playing, never bought.</li>
+          <li><strong>Sound effects</strong> are generated inside the app (no audio files, no streaming) and respect the phone's silent switch.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>Squishy Word Climb is made for children aged 4 to 12. Because no information is collected or transmitted, the app does not collect personal information from children (COPPA) or from anyone else. A parent or guardian can clear everything the app remembers by deleting the app.</p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <ul>
+          <li><strong>Forget a spelling list:</strong> the red "Delete list" button when editing that list.</li>
+          <li><strong>Forget one player:</strong> the red "Delete player" button at the bottom of that player's screen removes the saved player, coins, unlocks and achievements. That player's spelling lists are no longer reachable and go with the app when it is deleted.</li>
+          <li><strong>Forget everything:</strong> delete the app. There is no server-side copy to ask us to delete, because there is none.</li>
+          <li><strong>Camera:</strong> iOS Settings › Squishy Words turns the permission off; the app can then no longer take a picture, and typing or picking a photo still works.</li>
+          <li><strong>Sound:</strong> the speaker button on the player screen.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>If a future version ever adds something that sends data off the device, this policy will change first and the change will be described in the app's release notes.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Tom Brown</strong><br>
+        Support: <a href="mailto:appstoresupportwithasmile@icloud.com">appstoresupportwithasmile@icloud.com</a> (the same address as the App Store support contact).</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Thomas M Brown. Squishy Word Climb.</p>
+    <p><a href="/">Legal home</a></p>
+  </footer>
+</body>
+</html>
