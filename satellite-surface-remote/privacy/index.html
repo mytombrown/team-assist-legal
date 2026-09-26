@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Satellite Surface Remote privacy policy. The app talks only to the Companion server you choose. The developer collects nothing.">
+  <title>Privacy Policy | Satellite Surface Remote</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/satellite-surface-remote/privacy/" aria-label="Satellite Surface Remote">
+      <span>Satellite Surface Remote</span>
+    </a>
+    <nav aria-label="Pages">
+      <a aria-current="page" href="/satellite-surface-remote/privacy/">Privacy</a>
+      <a href="https://mytombrown.com/satellite-surface-remote/">Help</a>
+      <a href="/">Legal home</a>
+    </nav>
+  </header>
+
+  <main class="document-layout">
+    <aside class="document-summary" aria-label="Policy summary">
+      <p class="eyebrow">Privacy policy</p>
+      <h1>Satellite Surface Remote — Privacy Policy</h1>
+      <p>Effective September 26, 2026. Applies to the Satellite Surface Remote iPhone and iPad app (<code>com.thomasbrown.CompanionMobile</code>) by Tom Brown.</p>
+      <div class="summary-note">
+        <strong>The short version</strong>
+        <ul>
+          <li><strong>The developer collects nothing.</strong> There is no developer server, and nothing is sent to one.</li>
+          <li><strong>The app talks only to the Companion server you type in</strong>, on your own network.</li>
+          <li><strong>No accounts. No sign-in. No ads. No tracking. No analytics.</strong></li>
+          <li><strong>Saved servers and settings stay on the device</strong>, and deleting the app deletes them.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="document-content">
+      <section>
+        <h2>What the app stores, and where</h2>
+        <p>All of it is on the device, in the app's own local settings storage (iOS <code>UserDefaults</code>).</p>
+        <table>
+          <thead>
+            <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Saved servers: a name, host address, port, surface name, grid size, artwork size, text size, layout options, favourite flag, last-used time</td>
+              <td>So you can reconnect in one tap</td>
+              <td><code>CompanionMobile/Models.swift</code></td>
+            </tr>
+            <tr>
+              <td>The current connection and surface settings, auto-reconnect and auto-connect choices, and which saved server was used last</td>
+              <td>So the app opens the way you left it</td>
+              <td><code>CompanionMobile/Models.swift</code>, <code>CompanionMobile/SatelliteClient.swift</code></td>
+            </tr>
+            <tr>
+              <td>A random surface serial made by the app on first launch (<code>companion-mobile:</code> plus a random UUID)</td>
+              <td>So Companion recognises this device as the same surface each time</td>
+              <td><code>CompanionMobile/SatelliteClient.swift</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>The serial is random. It is not your Apple device identifier, advertising identifier, or anything tied to you.</p>
+      </section>
+
+      <section>
+        <h2>What goes over the network</h2>
+        <ul>
+          <li>The app opens one WebSocket connection to <strong>the host and port you enter</strong> — your own Bitfocus Companion server, normally on your local network.</li>
+          <li>It sends Companion Satellite API messages: the surface registration (surface name, random serial, grid size), button presses and releases, page changes, encoder turns, and keep-alive pings.</li>
+          <li>It receives button text, colours and pictures, page numbers, and variables from Companion, and shows them on screen. Nothing received is kept after the app closes.</li>
+          <li>The app sends nothing to the developer or to any other party.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Local Network permission</h2>
+        <p>iOS asks once whether the app may use your local network. It needs this to reach your Companion server. Change it any time in iOS Settings › Privacy &amp; Security › Local Network; with it off the app cannot connect.</p>
+      </section>
+
+      <section>
+        <h2>What the app does NOT do</h2>
+        <ul>
+          <li><strong>No developer server.</strong> No cloud, no sync, no backup by the app itself. (Your own iCloud device backup may include the app's local settings, under Apple's terms, like any other app.)</li>
+          <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
+          <li><strong>No other permissions.</strong> No camera, microphone, photos, location, contacts or notifications.</li>
+          <li><strong>No purchases, no accounts, no web views.</strong></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Your Companion server</h2>
+        <p>Your Companion server is run by you, not by the developer. What Companion does with the messages it receives is governed by Companion and whoever runs it. Satellite Surface Remote is not affiliated with, endorsed by, or sponsored by Bitfocus.</p>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>The app is a production tool and is not directed at children. It collects no personal information from anyone.</p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <ul>
+          <li><strong>Forget a server:</strong> delete it from the Servers list.</li>
+          <li><strong>Forget everything:</strong> delete the app. There is no server-side copy to ask us to delete, because there is none.</li>
+          <li><strong>Local Network:</strong> iOS Settings › Privacy &amp; Security › Local Network.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>If a future version ever sends data anywhere other than your own Companion server, this policy will change first and the change will be described in the app's release notes.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Tom Brown</strong><br>
+        Support: <a href="mailto:appstoresupportwithasmile@icloud.com">appstoresupportwithasmile@icloud.com</a> (the same address as the App Store support contact).</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Thomas M Brown. Satellite Surface Remote.</p>
+    <p><a href="/">Legal home</a></p>
+  </footer>
+</body>
+</html>
