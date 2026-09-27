@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Squishy Math Trail privacy policy. Nothing leaves your phone.">
+  <meta name="description" content="Squishy Math Trail privacy policy. Nothing leaves your phone. The microphone only measures loudness, and nothing is recorded.">
   <title>Privacy Policy | Squishy Math Trail</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="stylesheet" href="/styles.css">
@@ -23,12 +23,13 @@
     <aside class="document-summary" aria-label="Policy summary">
       <p class="eyebrow">Privacy policy</p>
       <h1>Squishy Math Trail — Privacy Policy</h1>
-      <p>Effective September 12, 2026 (first published September 11, 2026; this update adds the saved-player row below, nothing else changed). Applies to the Squishy Math Trail iPhone app (<code>com.mytombrown.squishymathtrail</code>) by Tom Brown.</p>
+      <p>Effective with version 2.0 (written September 26, 2026; first published September 11, 2026). Version 2.0 adds the microphone for two optional tricks — loudness only, nothing recorded — plus the phone's motion sensors, Apple's on-device speech and language model, and the Learning Center's levels on each saved player. It also describes the optional Squishy Pack purchase, handled by Apple. Applies to the Squishy Math Trail iPhone and iPad app (<code>com.mytombrown.squishymathtrail</code>) by Tom Brown.</p>
       <div class="summary-note">
         <strong>The short version</strong>
         <ul>
-          <li><strong>Nothing leaves your phone.</strong> The app has no internet connection of any kind.</li>
+          <li><strong>Nothing leaves your phone.</strong> The app has no internet connection of its own. The only thing it ever talks to is Apple's App Store, for the one optional purchase, and that goes through Apple, not us.</li>
           <li><strong>No accounts. No sign-in. No ads. No tracking. No analytics.</strong></li>
+          <li><strong>The microphone is off unless a grown-up turns it on</strong> for two optional tricks. It only measures how loud the room is. Nothing is recorded.</li>
           <li><strong>What it remembers stays on the device</strong>, and deleting the app deletes it.</li>
         </ul>
       </div>
@@ -37,7 +38,7 @@
     <article class="document-content">
       <section>
         <h2>What the app stores, and where</h2>
-        <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent anywhere.</p>
+        <p>All of it is on the phone, in the app's own local storage (iOS <code>UserDefaults</code>, and one small log file in the app's own Documents folder). None of it is sent anywhere.</p>
         <table>
           <thead>
             <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
@@ -54,14 +55,24 @@
               <td><code>SquishyMathTrail/Game/ScoreStore.swift</code></td>
             </tr>
             <tr>
-              <td>Saved players: name, age, chosen squishy and colour, coins, lifetime points and game stats, unlocked squishies and colours, achievements earned</td>
-              <td>So each kid keeps their coins, shop unlocks and badges between games</td>
+              <td>Saved players: name, age, chosen squishy and colour, coins, lifetime points and game stats, unlocked squishies and colours, achievements earned, Learning Center level and lessons per skill, tricks bought and switched on</td>
+              <td>So each kid keeps their coins, levels, unlocks and badges between games</td>
               <td><code>SquishyMathTrail/Game/ProfileStore.swift</code></td>
+            </tr>
+            <tr>
+              <td>Whether the Squishy Pack is owned (yes/no)</td>
+              <td>So the shop stays open without asking Apple every time (refreshed from Apple on every launch)</td>
+              <td><code>SquishyMathTrail/Game/ProfileStore.swift</code>, set by <code>SquishyMathTrail/Game/PackStore.swift</code></td>
             </tr>
             <tr>
               <td>Sound on/off</td>
               <td>To remember the speaker toggle</td>
               <td><code>SquishyMathTrail/Game/SoundKit.swift</code></td>
+            </tr>
+            <tr>
+              <td>A short log of loudness numbers and trick events (for example "t=3 peak −41.2 dB") — numbers only, never sound; capped at 64 KB</td>
+              <td>To tune how loud a "boo" must be</td>
+              <td><code>SquishyMathTrail/Game/MicFeed.swift</code></td>
             </tr>
           </tbody>
         </table>
@@ -69,27 +80,50 @@
       </section>
 
       <section>
+        <h2>The microphone</h2>
+        <ul>
+          <li><strong>Used only by two optional tricks, Windy and Boo!</strong> They come with the Squishy Pack and are bought with coins. Every other part of the app works without the microphone.</li>
+          <li><strong>Asked only after a grown-up.</strong> Switching one of those tricks on first shows the grown-up check; only then does iOS ask for the microphone. Say no and the two tricks stay off.</li>
+          <li><strong>Loudness only, on the device.</strong> While the Playroom is open with one of those tricks on, the app turns each slice of sound into one number — how loud it is — and throws the sound away. That number makes the squishy sway when you blow on the phone or jump at a loud "boo".</li>
+          <li><strong>Nothing is recorded, saved or sent.</strong> No audio is written anywhere, no speech is recognised, and nothing is uploaded. The only thing kept is the loudness log in the table above, which holds numbers, not sound, and stays on the phone.</li>
+          <li><strong>Off when the Playroom closes.</strong> The microphone is let go when the child leaves the Playroom or switches the tricks off.</li>
+          <li><strong>Turn it off any time:</strong> Settings › Squishy Math › Microphone, or switch the trick off on the player's screen.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Other things the app uses on the device</h2>
+        <ul>
+          <li><strong>Motion sensors.</strong> Some tricks and the squishy's jelly wobble read the phone's tilt and shake. The readings are used on the spot and never stored. iOS asks no permission for this.</li>
+          <li><strong>Apple's built-in voice.</strong> The squishy talks with Apple's speech voice, on the device.</li>
+          <li><strong>Apple's on-device language model.</strong> On devices with Apple Intelligence, Story Trail and the flashcard hint ask Apple's on-device model to choose words for a story (a hero, some things, a place). The app makes the math and the numbers itself and never gives the model the child's name or anything the child typed — only the squishy's name (like "Kitty") and the sum on the card. It runs on the device. Without the model, the app uses its own built-in word bank.</li>
+        </ul>
+      </section>
+
+      <section>
         <h2>What the app does NOT do</h2>
         <ul>
-          <li><strong>No network.</strong> There is no networking code in the app. Nothing is uploaded, downloaded, synced or backed up by the app itself. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
+          <li><strong>No network of its own.</strong> There is no networking code in the app. Nothing is uploaded, downloaded, synced or backed up by the app itself. The one exception is Apple's own App Store, which the app asks about the Squishy Pack (below); that conversation is between your device and Apple, under Apple's privacy policy, and we see none of it. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
           <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
-          <li><strong>No device permissions.</strong> The app never asks for camera, microphone, photos, contacts, location, or notifications.</li>
-          <li><strong>No purchases, no links out, no web views.</strong> Nothing in the app opens a browser or a store.</li>
-          <li><strong>Sound</strong> is generated inside the app (no audio files, no streaming) and respects the phone's silent switch.</li>
+          <li><strong>One device permission, and only if a grown-up turns it on:</strong> the microphone, above. The app never asks for camera, photos, contacts, location, speech recognition or notifications.</li>
+          <li><strong>One optional purchase, handled by Apple.</strong> The Squishy Pack ($0.99, once) opens more squishies and colours in the shop, gives 5,000 coins to every player, and lets each player buy squishy tricks with coins. Apple takes the payment through its own purchase sheet, behind a grown-up check; the app never sees a card, a name, an email or a receipt — only whether the pack is owned, which it remembers on the phone as a yes/no. Restore Purchases asks Apple the same question.</li>
+          <li><strong>No links out, no web views.</strong> Nothing in the app opens a browser.</li>
+          <li><strong>Sound</strong> is generated inside the app (no streaming) and respects the phone's silent switch.</li>
         </ul>
       </section>
 
       <section>
         <h2>Children</h2>
-        <p>Squishy Math Trail is made for children aged 4 to 12. Because no information is collected or transmitted, the app does not collect personal information from children (COPPA) or from anyone else. A parent or guardian can clear everything the app remembers by deleting the app.</p>
+        <p>Squishy Math Trail is made for children aged 4 to 12. Because no information is collected or transmitted, the app does not collect personal information from children (COPPA) or from anyone else. The microphone is only switched on by a grown-up and records nothing. A parent or guardian can clear everything the app remembers by deleting the app.</p>
       </section>
 
       <section>
         <h2>Your choices</h2>
         <ul>
-          <li><strong>Forget one player:</strong> the red "Delete player" button at the bottom of that player's screen removes the saved player, coins, unlocks and achievements.</li>
+          <li><strong>Forget one player:</strong> the red "Delete player" button at the bottom of that player's screen removes the saved player, coins, levels, unlocks, tricks and achievements.</li>
           <li><strong>Forget everything:</strong> delete the app. There is no server-side copy to ask us to delete, because there is none.</li>
-          <li><strong>Sound:</strong> the speaker button on the setup screen.</li>
+          <li><strong>Microphone:</strong> Settings › Squishy Math › Microphone, or switch Windy and Boo! off on the player's screen.</li>
+          <li><strong>Sound:</strong> the speaker button on the home screen.</li>
         </ul>
       </section>
 
