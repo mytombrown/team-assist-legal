@@ -24,7 +24,7 @@
     <aside class="document-summary" aria-label="Policy summary">
       <p class="eyebrow">Privacy policy</p>
       <h1>Satellite Surface Remote — Privacy Policy</h1>
-      <p>Effective September 26, 2026. Applies to the Satellite Surface Remote iPhone and iPad app (<code>com.thomasbrown.CompanionMobile</code>) by Tom Brown.</p>
+      <p>Effective September 30, 2026 (camera for Operator mode added; first version September 26, 2026). Applies to the Satellite Surface Remote iPhone and iPad app (<code>com.thomasbrown.CompanionMobile</code>) by Tom Brown.</p>
       <div class="summary-note">
         <strong>The short version</strong>
         <ul>
@@ -56,6 +56,11 @@
               <td><code>CompanionMobile/Models.swift</code>, <code>CompanionMobile/SatelliteClient.swift</code></td>
             </tr>
             <tr>
+              <td>Dashboard key picks, Operator roles you shared or joined (name, keys, a random token), and the theme and keep-awake choices</td>
+              <td>So the Dashboard and roles are there next time</td>
+              <td><code>CompanionMobile/SatelliteClient.swift</code>, <code>CompanionMobile/InstanceLibrary.swift</code>, <code>CompanionMobile/SurfaceGridView.swift</code></td>
+            </tr>
+            <tr>
               <td>A random surface serial made by the app on first launch (<code>companion-mobile:</code> plus a random UUID)</td>
               <td>So Companion recognises this device as the same surface each time</td>
               <td><code>CompanionMobile/SatelliteClient.swift</code></td>
@@ -71,6 +76,7 @@
           <li>The app opens one WebSocket connection to <strong>the host and port you enter</strong> — your own Bitfocus Companion server, normally on your local network.</li>
           <li>It sends Companion Satellite API messages: the surface registration (surface name, random serial, grid size), button presses and releases, page changes, encoder turns, and keep-alive pings.</li>
           <li>It receives button text, colours and pictures, page numbers, and variables from Companion, and shows them on screen. Nothing received is kept after the app closes.</li>
+          <li>For Operator mode it also reads one Companion custom variable (<code>surfaceremote_roles</code>) from the same Companion server's HTTP API, to check a shared role has not been revoked.</li>
           <li>The app sends nothing to the developer or to any other party.</li>
         </ul>
       </section>
@@ -81,12 +87,17 @@
       </section>
 
       <section>
+        <h2>Camera permission (Operator mode)</h2>
+        <p>The camera is used only when you tap Connect › Operator, to scan an Operator QR code shown on another phone. The scan runs on the device with Apple's scanner. No picture is saved or sent anywhere. Change it any time in iOS Settings › Privacy &amp; Security › Camera.</p>
+      </section>
+
+      <section>
         <h2>What the app does NOT do</h2>
         <ul>
           <li><strong>No developer server.</strong> No cloud, no sync, no backup by the app itself. (Your own iCloud device backup may include the app's local settings, under Apple's terms, like any other app.)</li>
           <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
-          <li><strong>No other permissions.</strong> No camera, microphone, photos, location, contacts or notifications.</li>
-          <li><strong>No purchases, no accounts, no web views.</strong></li>
+          <li><strong>No other permissions.</strong> No microphone, photos, location, contacts or notifications.</li>
+          <li><strong>No accounts, no web views.</strong> The one in-app purchase (Multi-Instance) goes through Apple; the developer receives no personal data from it.</li>
         </ul>
       </section>
 
