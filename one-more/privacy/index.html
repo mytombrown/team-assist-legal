@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One More: Puzzle Rivals privacy policy. No ads, no tracking, no servers of ours.">
+  <title>Privacy Policy | One More: Puzzle Rivals</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/one-more/privacy/" aria-label="One More: Puzzle Rivals">
+      <span>One More: Puzzle Rivals</span>
+    </a>
+    <nav aria-label="Pages">
+      <a aria-current="page" href="/one-more/privacy/">Privacy</a>
+      <a href="/">Legal home</a>
+    </nav>
+  </header>
+
+  <main class="document-layout">
+    <aside class="document-summary" aria-label="Policy summary">
+      <p class="eyebrow">Privacy policy</p>
+      <h1>One More: Puzzle Rivals — Privacy Policy</h1>
+      <p>Effective October 7, 2026. Applies to the One More: Puzzle Rivals iPhone app (shown on the phone as "One More", <code>com.mytombrown.onemore</code>) by Tom Brown.</p>
+      <div class="summary-note">
+        <strong>The short version</strong>
+        <ul>
+          <li><strong>We run no servers and collect nothing.</strong> No accounts of ours, no ads, no tracking, no analytics.</li>
+          <li><strong>Your scores and progress are kept on your phone</strong> and in your own iCloud, so a new phone signed in to the same Apple Account picks them up.</li>
+          <li><strong>Rankings and versus run through Apple's Game Center</strong>, only if you are signed in to it, under Apple's privacy policy.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="document-content">
+      <section>
+        <h2>What the app stores, and where</h2>
+        <p>On the phone, in the app's own settings storage (iOS <code>UserDefaults</code>), and mirrored to your own iCloud key-value storage (Apple's service, tied to your Apple Account). We cannot see either one.</p>
+        <table>
+          <thead>
+            <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Your best score in each game, lifetime points, rounds played</td>
+              <td>Personal bests and the points total on the home screen</td>
+              <td><code>OneMore/Core/ScoreStore.swift</code></td>
+            </tr>
+            <tr>
+              <td>Daily challenge scores (the last 60 days) and your longest daily streak</td>
+              <td>One try per day, streak achievements and streak unlocks</td>
+              <td><code>OneMore/Core/ScoreStore.swift</code></td>
+            </tr>
+            <tr>
+              <td>Points per week (the last 12 weeks)</td>
+              <td>Your score on this week's level board</td>
+              <td><code>OneMore/Core/League.swift</code></td>
+            </tr>
+            <tr>
+              <td>Achievements earned, versus wins, losses and 3–0 sweeps</td>
+              <td>Your rank, achievements and earned unlocks</td>
+              <td><code>OneMore/Core/Achievements.swift</code></td>
+            </tr>
+            <tr>
+              <td>Your chosen tile colors, background, win effect and title (this phone only)</td>
+              <td>To remember the Style tab</td>
+              <td><code>OneMore/Kit/Style.swift</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>None of this includes your name, email, contacts, location or anything typed except the guesses in Five Letters, which are not saved.</p>
+      </section>
+
+      <section>
+        <h2>Game Center (Apple)</h2>
+        <ul>
+          <li>If you are signed in to Game Center, the app sends your <strong>scores</strong> to its leaderboards, reports <strong>achievements</strong> you earn, and runs <strong>online versus matches</strong> through Game Center turn-based matches.</li>
+          <li>A versus match carries only what the game needs: the board seed, which three games are played, and each player's three round scores.</li>
+          <li>Other players see your Game Center nickname and scores according to your Game Center settings. Apple runs Game Center under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>; we do not receive your Apple Account details.</li>
+          <li>Not signed in? Every game, the daily challenge, ranks, unlocks and same-phone versus still work. Only the world leaderboards and online versus need Game Center.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What the app does NOT do</h2>
+        <ul>
+          <li><strong>No servers of ours.</strong> The only places data goes are your iCloud and, if you use it, Game Center — both Apple's.</li>
+          <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
+          <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
+          <li><strong>No purchases today.</strong> Everything in the app is free and every unlock is earned by playing. If paid options are ever added, this policy will say so first.</li>
+          <li><strong>Five Letters</strong> checks whether a guess is a real word with Apple's built-in spell checker, on the phone.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>One More is a general-audience game. We collect no personal information from anyone, including children. Game Center has its own age rules and parental controls, set in iOS Screen Time.</p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <ul>
+          <li><strong>Leave Game Center out:</strong> sign out of Game Center in iOS Settings, or never sign in. The app keeps working.</li>
+          <li><strong>Stop iCloud sync:</strong> iOS Settings › your name › iCloud lets you turn off iCloud for apps.</li>
+          <li><strong>Forget everything on this phone:</strong> delete the app. The iCloud copy can be removed in iOS Settings › your name › iCloud › Manage Account Storage.</li>
+          <li><strong>Game Center data:</strong> manage or remove it in iOS Settings › Game Center, under Apple's terms.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>If a future version ever sends anything else off the device, or adds purchases, this policy will change first and the release notes will say so.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Tom Brown</strong><br>
+        Support: <a href="mailto:appstoresupportwithasmile@icloud.com">appstoresupportwithasmile@icloud.com</a> (the same address as the App Store support contact).</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Thomas M Brown. One More: Puzzle Rivals.</p>
+    <p><a href="/">Legal home</a></p>
+  </footer>
+</body>
+</html>
