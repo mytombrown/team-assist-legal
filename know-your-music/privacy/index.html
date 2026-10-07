@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Know Your Music privacy policy. No ads, no tracking, no servers of ours.">
+  <title>Privacy Policy | Know Your Music</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/know-your-music/privacy/" aria-label="Know Your Music">
+      <span>Know Your Music</span>
+    </a>
+    <nav aria-label="Pages">
+      <a aria-current="page" href="/know-your-music/privacy/">Privacy</a>
+      <a href="/">Legal home</a>
+    </nav>
+  </header>
+
+  <main class="document-layout">
+    <aside class="document-summary" aria-label="Policy summary">
+      <p class="eyebrow">Privacy policy</p>
+      <h1>Know Your Music — Privacy Policy</h1>
+      <p>Effective October 7, 2026. Applies to the Know Your Music iPhone app (<code>com.mytombrown.yeardrop</code>) by Tom Brown.</p>
+      <div class="summary-note">
+        <strong>The short version</strong>
+        <ul>
+          <li><strong>We run no servers and collect nothing.</strong> No accounts of ours, no ads, no tracking, no analytics.</li>
+          <li><strong>Your best scores and recent searches stay on your phone.</strong></li>
+          <li><strong>Songs come from Apple Music, and Versus runs through Apple's Game Center</strong>, both under Apple's privacy policy.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="document-content">
+      <section>
+        <h2>What the app stores, and where</h2>
+        <p>On the phone only, in the app's own settings storage (iOS <code>UserDefaults</code>). It is not sent anywhere, and we cannot see it.</p>
+        <table>
+          <thead>
+            <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Your best score for each decade, and for each genre or search you have played in it (<code>bestScore.…</code>)</td>
+              <td>To show your best and celebrate a new one</td>
+              <td><code>YearDrop/Game/BestScores.swift</code></td>
+            </tr>
+            <tr>
+              <td>Your last five Custom searches, as typed (<code>customRecent</code>)</td>
+              <td>Quick picks under the Custom field</td>
+              <td><code>YearDrop/App/AppModel.swift</code></td>
+            </tr>
+            <tr>
+              <td>The genre or search you picked last (<code>selectedGenre</code>)</td>
+              <td>To start on it next time</td>
+              <td><code>YearDrop/App/AppModel.swift</code></td>
+            </tr>
+            <tr>
+              <td>Two settings switches: "Use sample songs" (<code>forceSampleSongs</code>) and the hidden diagnostics panel (<code>showDiagnostics</code>)</td>
+              <td>To remember the setting</td>
+              <td><code>YearDrop/App/AppModel.swift</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <p>None of this includes your name, email, contacts or location. Deleting the app deletes all of it.</p>
+      </section>
+
+      <section>
+        <h2>Apple Music (Apple)</h2>
+        <ul>
+          <li>On your first game the app asks for access to Apple Music. It uses that access only to find songs and play them in the game, through Apple's MusicKit.</li>
+          <li>The app searches Apple Music's catalog for decade and genre playlists. If you type a Custom search, that text is sent to Apple Music's catalog search to find matching songs.</li>
+          <li>With an Apple Music subscription you hear the songs; without one, Apple's 30-second previews. Songs are streamed, never downloaded or kept.</li>
+          <li>The app does not read your library, playlists or listening history, and adds nothing to them. "Open in Apple Music" opens the song in Apple's Music app.</li>
+          <li>Apple runs Apple Music under its own terms and <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Turn access off any time in iOS Settings › Privacy &amp; Security › Media &amp; Apple Music; the game then uses built-in sample songs.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Game Center (Apple)</h2>
+        <ul>
+          <li>Game Center is used only for <strong>Versus</strong>: a live match between two players. If you are signed in to Game Center, you can invite a friend, send an invite in Messages, or be matched with anyone.</li>
+          <li>A Versus match carries only what the game needs, sent between the two phones through Game Center: your Game Center name, the decade and genre or search being played, the ten songs (Apple Music song IDs, titles, artists, years and artwork links), a timing value so both phones start each song together, each player's answer and score, and rematch or leave messages.</li>
+          <li>Other players see your Game Center nickname according to your Game Center settings. Apple runs Game Center under <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>; we do not receive your Apple Account details or the match messages.</li>
+          <li>Not signed in? The solo game works fully. Only Versus needs Game Center.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What the app does NOT do</h2>
+        <ul>
+          <li><strong>No servers of ours.</strong> The only places data goes are Apple Music and, if you play Versus, Game Center — both Apple's.</li>
+          <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
+          <li><strong>One permission only:</strong> Apple Music. The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
+          <li><strong>No purchases today.</strong> If paid options are ever added, this policy will say so first.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>Know Your Music is a general-audience game. We collect no personal information from anyone, including children. Apple Music and Game Center have their own age rules and parental controls, set in iOS Screen Time.</p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <ul>
+          <li><strong>Apple Music access:</strong> iOS Settings › Privacy &amp; Security › Media &amp; Apple Music.</li>
+          <li><strong>Leave Game Center out:</strong> sign out of Game Center in iOS Settings, or never sign in. The solo game keeps working.</li>
+          <li><strong>Forget everything on this phone:</strong> delete the app.</li>
+          <li><strong>Game Center data:</strong> manage or remove it in iOS Settings › Game Center, under Apple's terms.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>If a future version ever sends anything else off the device, or adds purchases, this policy will change first and the release notes will say so.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Tom Brown</strong><br>
+        Support: <a href="mailto:appstoresupportwithasmile@icloud.com">appstoresupportwithasmile@icloud.com</a> (the same address as the App Store support contact).</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Thomas M Brown. Know Your Music.</p>
+    <p><a href="/">Legal home</a></p>
+  </footer>
+</body>
+</html>
