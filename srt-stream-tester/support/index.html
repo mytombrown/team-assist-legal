@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SRT Tester support and help.">
+  <title>Support | SRT Tester</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/srt-stream-tester/support/" aria-label="SRT Tester">
+      <span>SRT Tester</span>
+    </a>
+    <nav aria-label="Pages">
+      <a href="/srt-stream-tester/privacy/">Privacy</a>
+      <a aria-current="page" href="/srt-stream-tester/support/">Support</a>
+    </nav>
+  </header>
+
+  <main class="document-layout">
+    <aside class="document-summary" aria-label="Support summary">
+      <p class="eyebrow">Support</p>
+      <h1>SRT Tester help</h1>
+      <div class="summary-note">
+        <strong>Need a hand?</strong>
+        <p>Email <a href="mailto:appstoresupportwithasmile@icloud.com">appstoresupportwithasmile@icloud.com</a>. Include your device, its OS version, and what the other end of the link is (encoder, server or app).</p>
+      </div>
+    </aside>
+
+    <article class="document-content">
+      <section>
+        <h2>Connect</h2>
+        <ul>
+          <li>Follow the guided setup, or paste an <code>srt://host:port?…</code> address and the fields fill in.</li>
+          <li>Version 1.0 connects as a <strong>caller</strong>: the other end must be listening. Listener mode is coming in a future update.</li>
+          <li>Pick <strong>Receive</strong> to watch the stream, or <strong>Send</strong> to send your camera and microphone as a test source.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Passphrase and stream ID</h2>
+        <ul>
+          <li>A passphrase must be 10–79 characters and match on both ends.</li>
+          <li>If the passphrase is wrong, the app says so: packets arrive but cannot be decrypted.</li>
+          <li>Some servers need a stream ID. Ask whoever runs the server for it.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Reading the numbers</h2>
+        <ul>
+          <li>The health line at the top gives one verdict: good, or what is wrong.</li>
+          <li>Tap any figure (hover on the Mac) for a plain-words explanation.</li>
+          <li>Rule of thumb: latency should be at least 3–4 times the round-trip time.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Ad cues (SCTE-35)</h2>
+        <ul>
+          <li>The Ad cues card shows each cue as it arrives, in plain words.</li>
+          <li>In Send mode you can insert a test cue into your outgoing stream.</li>
+          <li>The verdict line names what is missing if cues do not arrive.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Can't connect?</h2>
+        <ul>
+          <li>Check the host and port, and that the other end is listening.</li>
+          <li>Firewalls must allow UDP on that port.</li>
+          <li>Saved connections sync to your other devices through iCloud. Give it a minute.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Your data</h2>
+        <p>Nothing is collected. See the <a href="/srt-stream-tester/privacy/">privacy policy</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Thomas M Brown. SRT Tester.</p>
+    <p><a href="/srt-stream-tester/privacy/">Privacy</a> · <a href="/">Legal home</a></p>
+  </footer>
+</body>
+</html>
