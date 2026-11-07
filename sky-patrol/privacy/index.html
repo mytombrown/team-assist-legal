@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Squishy Sky Patrol privacy policy. We collect nothing; only your best score can go to Apple's Game Center.">
+  <title>Privacy Policy | Squishy Sky Patrol</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/sky-patrol/support/" aria-label="Squishy Sky Patrol">
+      <span>Squishy Sky Patrol</span>
+    </a>
+    <nav aria-label="Pages">
+      <a aria-current="page" href="/sky-patrol/privacy/">Privacy</a>
+      <a href="/sky-patrol/support/">Support</a>
+    </nav>
+  </header>
+
+  <main class="document-layout">
+    <aside class="document-summary" aria-label="Policy summary">
+      <p class="eyebrow">Privacy policy</p>
+      <h1>Squishy Sky Patrol — Privacy Policy</h1>
+      <p>Effective November 7, 2026. Applies to the Squishy Sky Patrol iPhone app (shown on the phone as "Sky Patrol", <code>com.mytombrown.squishyskypatrol</code>) by Tom Brown.</p>
+      <div class="summary-note">
+        <strong>The short version</strong>
+        <ul>
+          <li><strong>We collect nothing.</strong> The app has no server and no networking code of its own.</li>
+          <li><strong>One thing can leave the phone: your best score, to Apple's Game Center</strong> — and only if you are signed in to Game Center. Say no and the game plays the same.</li>
+          <li><strong>No accounts of ours. No ads. No tracking. No analytics. No purchases.</strong></li>
+          <li><strong>Everything else stays on the device</strong>, and deleting the app deletes it.</li>
+          <li><strong>It asks for no permissions</strong> — no camera, microphone, photos, location or contacts.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="document-content">
+      <section>
+        <h2>What the app stores, and where</h2>
+        <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent to us. No names, ages or other personal details are asked for or stored.</p>
+        <table>
+          <thead>
+            <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Best score</td><td>To show your best and post it to Game Center</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
+            <tr><td>Jelly coins collected</td><td>To show your coin total</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
+            <tr><td>Stars earned on each level (best result)</td><td>To show your stars on the map</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
+            <tr><td>Highest level unlocked</td><td>So the next level stays open</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
+            <tr><td>Whether the opening story has been seen</td><td>To skip it on the next launch</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
+            <tr><td>What Game Center last did (signed in or not, last score sent)</td><td>So a problem can be read off the phone</td><td><code>SquishySkyPatrol/Game/GameCenter.swift</code></td></tr>
+            <tr><td>Sound on/off</td><td>To remember the sound setting</td><td><code>SquishyKit/Sources/SquishyKit/Game/SoundKit.swift</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Game Center</h2>
+        <ul>
+          <li>At launch the app asks Apple's <strong>Game Center</strong> to sign in. This is Apple's own screen and account, not ours. It is shown at most once per launch.</li>
+          <li><strong>If you are signed in</strong>, the app sends one number — your best score — to the game's Game Center leaderboard. Apple shows it with your Game Center nickname.</li>
+          <li><strong>If you say no</strong>, nothing is sent and the game plays exactly the same.</li>
+          <li>The app uses the leaderboard only: no friends list, no invites, no chat, no multiplayer.</li>
+          <li>Game Center is run by Apple under Apple's privacy policy. We do not receive your Apple ID, email or contacts. A grown-up can turn Game Center off in iOS Settings › Game Center, or limit it with Screen Time.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What the app does NOT do</h2>
+        <ul>
+          <li><strong>No networking code of its own.</strong> Apart from the Game Center score above, which iOS sends, nothing is uploaded, downloaded, synced or backed up by the app. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
+          <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
+          <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
+          <li><strong>No purchases, no web views, no links out of the app.</strong></li>
+          <li><strong>Sound effects</strong> are generated inside the app (no audio files, no streaming) and respect the phone's silent switch.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>Squishy Sky Patrol is made for children. We collect no personal information from children (COPPA) or from anyone else. The only thing that can leave the phone is the best score to Apple's Game Center, which a grown-up controls in iOS Settings. A parent or guardian can clear everything the app remembers by deleting the app.</p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <ul>
+          <li><strong>Keep the score on the phone:</strong> decline the Game Center sign-in, or turn Game Center off in iOS Settings.</li>
+          <li><strong>Forget everything:</strong> delete the app. There is no server-side copy to ask us to delete, because there is none. A score already on the Game Center leaderboard is Apple's; manage it in iOS Settings › Game Center.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>If a future version ever sends anything else off the device, this policy will change first and the change will be described in the app's release notes.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Tom Brown</strong><br>
+        Support: <a href="mailto:appstoresupportwithasmile@icloud.com">appstoresupportwithasmile@icloud.com</a> (the same address as the App Store support contact).</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Thomas M Brown. Squishy Sky Patrol.</p>
+    <p><a href="/sky-patrol/support/">Support</a> · <a href="/sky-patrol/privacy/">Privacy</a> · <a href="/">Legal home</a></p>
+  </footer>
+</body>
+</html>
