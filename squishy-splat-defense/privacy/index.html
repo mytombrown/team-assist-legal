@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Squishy Splat Defense privacy policy. Nothing leaves your phone.">
+  <meta name="description" content="Squishy Splat Defense privacy policy. We collect nothing; only your high score can go to Apple's Game Center.">
   <title>Privacy Policy | Squishy Splat Defense</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="stylesheet" href="/styles.css">
@@ -27,9 +27,10 @@
       <div class="summary-note">
         <strong>The short version</strong>
         <ul>
-          <li><strong>Nothing leaves your phone.</strong> The app has no internet connection of any kind.</li>
-          <li><strong>No accounts. No sign-in. No ads. No tracking. No analytics. No purchases.</strong></li>
-          <li><strong>What it remembers stays on the device</strong>, and deleting the app deletes it.</li>
+          <li><strong>We collect nothing.</strong> The app has no server and no networking code of its own.</li>
+          <li><strong>One thing can leave the phone: your high score, to Apple's Game Center</strong> — and only if you are signed in to Game Center. Say no and the game plays the same.</li>
+          <li><strong>No accounts of ours. No ads. No tracking. No analytics. No purchases.</strong></li>
+          <li><strong>Everything else stays on the device</strong>, and deleting the app deletes it.</li>
           <li><strong>It asks for no permissions</strong> — no camera, microphone, photos, location or contacts.</li>
         </ul>
       </div>
@@ -38,40 +39,37 @@
     <article class="document-content">
       <section>
         <h2>What the app stores, and where</h2>
-        <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent anywhere. No names, ages or other personal details are asked for or stored.</p>
+        <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent to us. No names, ages or other personal details are asked for or stored.</p>
         <table>
           <thead>
             <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Stars earned on each level (best result)</td>
-              <td>To show your stars on the level map</td>
-              <td><code>SquishySplatDefense/Views/Screens.swift</code></td>
-            </tr>
-            <tr>
-              <td>Highest level unlocked</td>
-              <td>So the next level stays open</td>
-              <td><code>SquishySplatDefense/Views/Screens.swift</code></td>
-            </tr>
-            <tr>
-              <td>Whether the opening story has been seen</td>
-              <td>To skip it on the next launch</td>
-              <td><code>SquishySplatDefense/Views/Screens.swift</code></td>
-            </tr>
-            <tr>
-              <td>Sound on/off</td>
-              <td>To remember the sound setting</td>
-              <td><code>SquishyKit/Sources/SquishyKit/Game/SoundKit.swift</code></td>
-            </tr>
+            <tr><td>Stars earned on each level (best result)</td><td>To show your stars on the level map</td><td><code>SquishySplatDefense/Views/Screens.swift</code></td></tr>
+            <tr><td>Best score on each level</td><td>To work out your high score</td><td><code>SquishySplatDefense/Views/Screens.swift</code></td></tr>
+            <tr><td>Highest level unlocked</td><td>So the next level stays open</td><td><code>SquishySplatDefense/Views/Screens.swift</code></td></tr>
+            <tr><td>Whether the opening story has been seen</td><td>To skip it on the next launch</td><td><code>SquishySplatDefense/Views/Screens.swift</code></td></tr>
+            <tr><td>What Game Center last did (signed in or not, last score sent)</td><td>So a problem can be read off the phone</td><td><code>SquishySplatDefense/Game/GameCenter.swift</code></td></tr>
+            <tr><td>Sound on/off</td><td>To remember the sound setting</td><td><code>SquishyKit/Sources/SquishyKit/Game/SoundKit.swift</code></td></tr>
           </tbody>
         </table>
       </section>
 
       <section>
+        <h2>Game Center</h2>
+        <ul>
+          <li>At launch the app asks Apple's <strong>Game Center</strong> to sign in. This is Apple's own screen and account, not ours.</li>
+          <li><strong>If you are signed in</strong>, the app sends one number — your high score (your best score on each level, added up) — to the game's Game Center leaderboard. Apple shows it with your Game Center nickname.</li>
+          <li><strong>If you say no</strong>, nothing is sent and the game plays exactly the same.</li>
+          <li>The app uses the leaderboard only: no friends list, no invites, no chat, no multiplayer.</li>
+          <li>Game Center is run by Apple under Apple's privacy policy. We do not receive your Apple ID, email or contacts. A grown-up can turn Game Center off in iOS Settings › Game Center, or limit it with Screen Time.</li>
+        </ul>
+      </section>
+
+      <section>
         <h2>What the app does NOT do</h2>
         <ul>
-          <li><strong>No network.</strong> There is no networking code in the app. Nothing is uploaded, downloaded, synced or backed up by the app itself. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
+          <li><strong>No networking code of its own.</strong> Apart from the Game Center score above, which iOS sends, nothing is uploaded, downloaded, synced or backed up by the app. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
           <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
           <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
           <li><strong>No purchases, no web views.</strong> The only link out is <strong>Help</strong> on the title screen. It opens the help site in Safari, and only after a grown-up answers a sum.</li>
@@ -81,19 +79,20 @@
 
       <section>
         <h2>Children</h2>
-        <p>Squishy Splat Defense is made for children. Because no information is collected or transmitted, the app does not collect personal information from children (COPPA) or from anyone else. A parent or guardian can clear everything the app remembers by deleting the app.</p>
+        <p>Squishy Splat Defense is made for children. We collect no personal information from children (COPPA) or from anyone else. The only thing that can leave the phone is the high score to Apple's Game Center, which a grown-up controls in iOS Settings. A parent or guardian can clear everything the app remembers by deleting the app.</p>
       </section>
 
       <section>
         <h2>Your choices</h2>
         <ul>
-          <li><strong>Forget everything:</strong> delete the app. There is no server-side copy to ask us to delete, because there is none.</li>
+          <li><strong>Keep the score on the phone:</strong> decline the Game Center sign-in, or turn Game Center off in iOS Settings.</li>
+          <li><strong>Forget everything:</strong> delete the app. There is no server-side copy to ask us to delete, because there is none. A score already on the Game Center leaderboard is Apple's; manage it in iOS Settings › Game Center.</li>
         </ul>
       </section>
 
       <section>
         <h2>Changes</h2>
-        <p>If a future version ever adds something that sends data off the device (for example Game Center high scores), this policy will change first and the change will be described in the app's release notes.</p>
+        <p>If a future version ever sends anything else off the device, this policy will change first and the change will be described in the app's release notes.</p>
       </section>
 
       <section>
