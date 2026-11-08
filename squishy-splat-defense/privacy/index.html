@@ -29,7 +29,8 @@
         <ul>
           <li><strong>We collect nothing.</strong> The app has no server and no networking code of its own.</li>
           <li><strong>One thing can leave the phone: your high score, to Apple's Game Center</strong> — and only if you are signed in to Game Center. Say no and the game plays the same.</li>
-          <li><strong>No accounts of ours. No ads. No tracking. No analytics. No purchases.</strong></li>
+          <li><strong>No accounts of ours. No ads. No tracking. No analytics.</strong></li>
+          <li><strong>Purchases go through Apple.</strong> The first 10 levels of each land are free; a $0.99 purchase per land opens the rest. Apple takes the payment; we never see your name, card or Apple ID. The phone only remembers which lands are open.</li>
           <li><strong>Everything else stays on the device</strong>, and deleting the app deletes it.</li>
           <li><strong>It asks for no permissions</strong> — no camera, microphone, photos, location or contacts.</li>
         </ul>
@@ -72,7 +73,8 @@
           <li><strong>No networking code of its own.</strong> Apart from the Game Center score above, which iOS sends, nothing is uploaded, downloaded, synced or backed up by the app. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
           <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
           <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
-          <li><strong>No purchases, no web views.</strong> The only link out is <strong>Help</strong> on the title screen. It opens the help site in Safari, and only after a grown-up answers a sum.</li>
+          <li><strong>Purchases</strong> use Apple's StoreKit (<code>Game/LandStore.swift</code>), behind a grown-up check. Apple processes them; the app keeps only "this land is open" on the phone. Restore Purchases asks Apple again.</li>
+          <li><strong>No web views.</strong> The only link out is <strong>Help</strong> on the title screen. It opens the help site in Safari, and only after a grown-up answers a sum.</li>
           <li><strong>Sound effects</strong> are generated inside the app (no audio files, no streaming) and respect the phone's silent switch.</li>
         </ul>
       </section>
