@@ -23,7 +23,7 @@
     <aside class="document-summary" aria-label="Policy summary">
       <p class="eyebrow">Privacy policy</p>
       <h1>Squishy Splat Defense — Privacy Policy</h1>
-      <p>Effective November 7, 2026. Applies to the Squishy Splat Defense iPhone app (shown on the phone as "Splat Defense", <code>com.mytombrown.squishysplatdefense</code>) by Tom Brown.</p>
+      <p>Effective November 9, 2026. Applies to the Squishy Splat Defense iPhone app (shown on the phone as "Splat Defense", <code>com.mytombrown.squishysplatdefense</code>) by Tom Brown.</p>
       <div class="summary-note">
         <strong>The short version</strong>
         <ul>
@@ -31,7 +31,7 @@
           <li><strong>One thing can leave the phone: your high score, to Apple's Game Center</strong> — and only if you are signed in to Game Center. Say no and the game plays the same.</li>
           <li><strong>No accounts of ours. No ads. No tracking. No analytics.</strong></li>
           <li><strong>Purchases go through Apple.</strong> The first 10 levels of each land are free; a $0.99 purchase per land opens the rest. Apple takes the payment; we never see your name, card or Apple ID. The phone only remembers which lands are open.</li>
-          <li><strong>Everything else stays on the device</strong>, and deleting the app deletes it.</li>
+          <li><strong>Your progress stays on your device and in your own iCloud</strong>, so your other iPhones and iPads signed in to the same Apple ID pick it up. It goes to Apple's iCloud, never to us. Turn iCloud off for the app and it stays on the device only.</li>
           <li><strong>It asks for no permissions</strong> — no camera, microphone, photos, location or contacts.</li>
         </ul>
       </div>
@@ -41,6 +41,7 @@
       <section>
         <h2>What the app stores, and where</h2>
         <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent to us. No names, ages or other personal details are asked for or stored.</p>
+        <p><strong>iCloud.</strong> The game progress rows below (stars, best scores, levels reached, story and walkthrough seen, Easy/Hard) are also copied to Apple's iCloud key-value storage in <strong>your own</strong> iCloud account, so another device on the same Apple ID carries on where you left off (<code>SquishySplatDefense/Game/CloudSync.swift</code>). Apple stores it under its own privacy policy; we cannot read it. Purchases are not in it (Apple's Restore Purchases brings those back), nor is the Game Center or sound setting.</p>
         <table>
           <thead>
             <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
@@ -70,7 +71,7 @@
       <section>
         <h2>What the app does NOT do</h2>
         <ul>
-          <li><strong>No networking code of its own.</strong> Apart from the Game Center score above, which iOS sends, nothing is uploaded, downloaded, synced or backed up by the app. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
+          <li><strong>No networking code of its own.</strong> Apart from the Game Center score and the iCloud progress copy above, both sent by iOS to Apple, nothing is uploaded, downloaded, synced or backed up by the app. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
           <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
           <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
           <li><strong>Purchases</strong> use Apple's StoreKit (<code>Game/LandStore.swift</code>), behind a grown-up check. Apple processes them; the app keeps only "this land is open" on the phone. Restore Purchases asks Apple again.</li>
@@ -81,14 +82,15 @@
 
       <section>
         <h2>Children</h2>
-        <p>Squishy Splat Defense is made for children. We collect no personal information from children (COPPA) or from anyone else. The only thing that can leave the phone is the high score to Apple's Game Center, which a grown-up controls in iOS Settings. A parent or guardian can clear everything the app remembers by deleting the app.</p>
+        <p>Squishy Splat Defense is made for children. We collect no personal information from children (COPPA) or from anyone else. The only things that can leave the phone are the high score to Apple's Game Center and the game progress to the family's own iCloud, both controlled by a grown-up in iOS Settings. A parent or guardian can clear everything the app remembers on a device by deleting the app; the iCloud copy is removed in iOS Settings › [name] › iCloud › Manage Storage.</p>
       </section>
 
       <section>
         <h2>Your choices</h2>
         <ul>
           <li><strong>Keep the score on the phone:</strong> decline the Game Center sign-in, or turn Game Center off in iOS Settings.</li>
-          <li><strong>Forget everything:</strong> delete the app. There is no server-side copy to ask us to delete, because there is none. A score already on the Game Center leaderboard is Apple's; manage it in iOS Settings › Game Center.</li>
+          <li><strong>Keep progress on one device:</strong> turn iCloud off for Splat Defense in iOS Settings › [name] › iCloud.</li>
+          <li><strong>Forget everything:</strong> delete the app (and its iCloud copy, above). There is no server-side copy of ours to ask us to delete, because there is none. A score already on the Game Center leaderboard is Apple's; manage it in iOS Settings › Game Center.</li>
         </ul>
       </section>
 
