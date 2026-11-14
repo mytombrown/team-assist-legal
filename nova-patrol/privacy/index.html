@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nova Patrol privacy policy. We collect nothing. Your total score can go to Apple's Game Center and your progress to your own iCloud.">
+  <title>Privacy Policy | Nova Patrol</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/nova-patrol/support/" aria-label="Nova Patrol">
+      <span>Nova Patrol</span>
+    </a>
+    <nav aria-label="Pages">
+      <a aria-current="page" href="/nova-patrol/privacy/">Privacy</a>
+      <a href="/nova-patrol/support/">Support</a>
+    </nav>
+  </header>
+
+  <main class="document-layout">
+    <aside class="document-summary" aria-label="Policy summary">
+      <p class="eyebrow">Privacy policy</p>
+      <h1>Nova Patrol — Privacy Policy</h1>
+      <p>Effective November 14, 2026. Applies to the Nova Patrol iPhone app (<code>com.mytombrown.novapatrol</code>) by Tom Brown.</p>
+      <div class="summary-note">
+        <strong>The short version</strong>
+        <ul>
+          <li><strong>We collect nothing.</strong> The app has no server and no networking code of its own.</li>
+          <li><strong>One thing can leave the phone to Apple's Game Center: your total score</strong> — and only if you are signed in to Game Center. Say no and the game plays the same.</li>
+          <li><strong>Your progress stays on your device and in your own iCloud</strong>, so your other iPhones signed in to the same Apple ID pick it up. It goes to Apple's iCloud, never to us. Turn iCloud off for the app and it stays on the device only.</li>
+          <li><strong>No accounts of ours. No ads. No purchases. No tracking. No analytics.</strong></li>
+          <li><strong>It asks for no permissions</strong> — no camera, microphone, photos, location or contacts.</li>
+        </ul>
+      </div>
+    </aside>
+
+    <article class="document-content">
+      <section>
+        <h2>What the app stores, and where</h2>
+        <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent to us. No names, ages or other personal details are asked for or stored.</p>
+        <table>
+          <thead>
+            <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Best score on each mission</td><td>To show your best and add up your total</td><td><code>NovaPatrol/Game/Rules.swift</code></td></tr>
+            <tr><td>Stars earned on each mission</td><td>To show your stars and open the next galaxy</td><td><code>NovaPatrol/Game/Rules.swift</code></td></tr>
+            <tr><td>Credits collected</td><td>To show your credit total</td><td><code>NovaPatrol/Game/Rules.swift</code></td></tr>
+            <tr><td>What Game Center last did (signed in or not, last score sent)</td><td>So a problem can be read off the phone</td><td><code>NovaPatrol/Game/GameCenter.swift</code></td></tr>
+            <tr><td>What iCloud sync last did</td><td>So a problem can be read off the phone</td><td><code>NovaPatrol/Game/CloudSync.swift</code></td></tr>
+          </tbody>
+        </table>
+        <p><strong>iCloud.</strong> The best scores, stars and credits are also copied to Apple's iCloud key-value storage in <strong>your own</strong> iCloud account, so another device on the same Apple ID carries on where you left off (<code>NovaPatrol/Game/CloudSync.swift</code>). Apple stores it under its own privacy policy; we cannot read it.</p>
+      </section>
+
+      <section>
+        <h2>Game Center</h2>
+        <ul>
+          <li>At launch the app asks Apple's <strong>Game Center</strong> to sign in quietly. This is Apple's own account, not ours.</li>
+          <li><strong>If you are signed in</strong>, the app sends one number — your total score — to the game's Game Center leaderboard. Apple shows it with your Game Center nickname.</li>
+          <li><strong>If you are not</strong>, nothing is sent and the game plays exactly the same.</li>
+          <li>Leaderboard only: no friends list, no invites, no chat, no multiplayer.</li>
+          <li>Game Center is run by Apple under Apple's privacy policy. We do not receive your Apple ID, email or contacts. You can turn Game Center off in iOS Settings › Game Center.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>What the app does NOT do</h2>
+        <ul>
+          <li><strong>No networking code of its own.</strong> Apart from the Game Center score and the iCloud progress copy above, both sent by iOS to Apple, nothing is uploaded, downloaded or synced by the app.</li>
+          <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
+          <li><strong>No purchases.</strong> The app is free and sells nothing.</li>
+          <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
+          <li><strong>No web views, no links out of the app.</strong></li>
+          <li><strong>Sound effects</strong> are generated inside the app (no audio files, no streaming).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Children</h2>
+        <p>Nova Patrol is not made for children under 13 and is not in the App Store's Kids Category. We collect no personal information from anyone, children included (COPPA).</p>
+      </section>
+
+      <section>
+        <h2>Your choices</h2>
+        <ul>
+          <li><strong>Keep the score on the phone:</strong> stay signed out of Game Center, or turn it off in iOS Settings.</li>
+          <li><strong>Keep progress on one device:</strong> turn iCloud off for Nova Patrol in iOS Settings › [name] › iCloud.</li>
+          <li><strong>Forget everything:</strong> delete the app, and remove its iCloud copy in iOS Settings › [name] › iCloud › Manage Storage. We hold no copy to delete. A score already on the Game Center leaderboard is Apple's; manage it in iOS Settings › Game Center.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Changes</h2>
+        <p>If a future version ever sends anything else off the device, this policy will change first and the change will be described in the app's release notes.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p><strong>Tom Brown</strong><br>
+        Support: <a href="mailto:appstoresupportwithasmile@icloud.com">appstoresupportwithasmile@icloud.com</a> (the same address as the App Store support contact).</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Thomas M Brown. Nova Patrol.</p>
+    <p><a href="/nova-patrol/support/">Support</a> · <a href="/nova-patrol/privacy/">Privacy</a> · <a href="/">Legal home</a></p>
+  </footer>
+</body>
+</html>
