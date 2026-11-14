@@ -30,7 +30,7 @@
           <li><strong>We collect nothing.</strong> The app has no server and no networking code of its own.</li>
           <li><strong>One thing can leave the phone to Apple's Game Center: your total score</strong> — and only if you are signed in to Game Center. Say no and the game plays the same.</li>
           <li><strong>Your progress stays on your device and in your own iCloud</strong>, so your other iPhones signed in to the same Apple ID pick it up. It goes to Apple's iCloud, never to us. Turn iCloud off for the app and it stays on the device only.</li>
-          <li><strong>No accounts of ours. No ads. No purchases. No tracking. No analytics.</strong></li>
+          <li><strong>No accounts of ours. No ads. No tracking. No analytics.</strong> Purchases are handled by Apple.</li>
           <li><strong>It asks for no permissions</strong> — no camera, microphone, photos, location or contacts.</li>
         </ul>
       </div>
@@ -45,14 +45,16 @@
             <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
           </thead>
           <tbody>
-            <tr><td>Best score on each mission</td><td>To show your best and add up your total</td><td><code>NovaPatrol/Game/Rules.swift</code></td></tr>
-            <tr><td>Stars earned on each mission</td><td>To show your stars and open the next galaxy</td><td><code>NovaPatrol/Game/Rules.swift</code></td></tr>
-            <tr><td>Credits collected</td><td>To show your credit total</td><td><code>NovaPatrol/Game/Rules.swift</code></td></tr>
-            <tr><td>What Game Center last did (signed in or not, last score sent)</td><td>So a problem can be read off the phone</td><td><code>NovaPatrol/Game/GameCenter.swift</code></td></tr>
-            <tr><td>What iCloud sync last did</td><td>So a problem can be read off the phone</td><td><code>NovaPatrol/Game/CloudSync.swift</code></td></tr>
+            <tr><td>Best score on each mission</td><td>To show your best and add up your total</td><td><code>NovaPatrol/Core/Rules.swift</code></td></tr>
+            <tr><td>Stars earned on each mission</td><td>To show your stars and open the next galaxy</td><td><code>NovaPatrol/Core/Rules.swift</code></td></tr>
+            <tr><td>Credits collected</td><td>To show your credit total</td><td><code>NovaPatrol/Core/Rules.swift</code></td></tr>
+            <tr><td>Which look you picked</td><td>To open the game in it</td><td><code>NovaPatrol/Store/LookStore.swift</code></td></tr>
+            <tr><td>Which looks you own (yes/no per look)</td><td>So the menus know before Apple's store answers</td><td><code>NovaPatrol/Store/LookStore.swift</code></td></tr>
+            <tr><td>What Game Center last did (signed in or not, last score sent)</td><td>So a problem can be read off the phone</td><td><code>NovaPatrol/Core/GameCenter.swift</code></td></tr>
+            <tr><td>What iCloud sync last did</td><td>So a problem can be read off the phone</td><td><code>NovaPatrol/Core/CloudSync.swift</code></td></tr>
           </tbody>
         </table>
-        <p><strong>iCloud.</strong> The best scores, stars and credits are also copied to Apple's iCloud key-value storage in <strong>your own</strong> iCloud account, so another device on the same Apple ID carries on where you left off (<code>NovaPatrol/Game/CloudSync.swift</code>). Apple stores it under its own privacy policy; we cannot read it.</p>
+        <p><strong>iCloud.</strong> The best scores, stars and credits are also copied to Apple's iCloud key-value storage in <strong>your own</strong> iCloud account, so another device on the same Apple ID carries on where you left off (<code>NovaPatrol/Core/CloudSync.swift</code>). Apple stores it under its own privacy policy; we cannot read it.</p>
       </section>
 
       <section>
@@ -71,7 +73,7 @@
         <ul>
           <li><strong>No networking code of its own.</strong> Apart from the Game Center score and the iCloud progress copy above, both sent by iOS to Apple, nothing is uploaded, downloaded or synced by the app.</li>
           <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
-          <li><strong>No purchases.</strong> The app is free and sells nothing.</li>
+          <li><strong>Purchases are handled by Apple.</strong> The game is free. Extra looks are one-time in-app purchases through Apple's App Store. We never see your payment details. The app only asks Apple, on your device, whether you own a look.</li>
           <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
           <li><strong>No web views, no links out of the app.</strong></li>
           <li><strong>Sound effects</strong> are generated inside the app (no audio files, no streaming).</li>
