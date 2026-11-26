@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Squishy Sky Patrol privacy policy. We collect nothing. Your best score can go to Apple's Game Center and your progress to your own iCloud.">
-  <title>Privacy Policy | Squishy Sky Patrol</title>
+  <meta name="description" content="Pip's Arcade privacy policy. We collect nothing. Best scores can go to Apple's Game Center and game progress to your own iCloud.">
+  <title>Privacy Policy | Pip's Arcade</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/sky-patrol/support/" aria-label="Squishy Sky Patrol">
-      <span>Squishy Sky Patrol</span>
+    <a class="brand" href="/sky-patrol/support/" aria-label="Pip's Arcade">
+      <span>Pip's Arcade</span>
     </a>
     <nav aria-label="Pages">
       <a aria-current="page" href="/sky-patrol/privacy/">Privacy</a>
@@ -22,17 +22,17 @@
   <main class="document-layout">
     <aside class="document-summary" aria-label="Policy summary">
       <p class="eyebrow">Privacy policy</p>
-      <h1>Squishy Sky Patrol — Privacy Policy</h1>
-      <p>Effective November 9, 2026. Applies to the Squishy Sky Patrol iPhone app (shown on the phone as "Sky Patrol", <code>com.mytombrown.squishyskypatrol</code>) by Tom Brown.</p>
+      <h1>Pip's Arcade — Privacy Policy</h1>
+      <p>Effective November 26, 2026. Applies to the Pip's Arcade iPhone app (<code>com.mytombrown.squishyskypatrol</code>) by Tom Brown: the DotVille town, the Dot claw, My Room, and the games inside it, Sky Patrol and Splat Defense. This replaces the earlier Squishy Sky Patrol policy.</p>
       <div class="summary-note">
         <strong>The short version</strong>
         <ul>
           <li><strong>We collect nothing.</strong> The app has no server and no networking code of its own.</li>
-          <li><strong>One thing can leave the phone: your best score, to Apple's Game Center</strong> — and only if you are signed in to Game Center. Say no and the game plays the same.</li>
-          <li><strong>No accounts of ours. No ads. No tracking. No analytics.</strong></li>
-          <li><strong>Purchases go through Apple.</strong> The first 10 levels of each land are free; a $0.99 purchase per land opens the rest. Apple takes the payment; we never see your name, card or Apple ID. The phone only remembers which lands are open.</li>
-          <li><strong>Your progress stays on your device and in your own iCloud</strong>, so your other iPhones and iPads signed in to the same Apple ID pick it up. It goes to Apple's iCloud, never to us. Turn iCloud off for the app and it stays on the device only.</li>
-          <li><strong>It asks for no permissions</strong> — no camera, microphone, photos, location or contacts.</li>
+          <li><strong>Best scores can go to Apple's Game Center</strong> — only if you are signed in to Game Center. Say no and every game plays the same.</li>
+          <li><strong>Game progress can go to your own iCloud</strong>, so your other iPhones on the same Apple Account carry on. It goes to Apple, never to us.</li>
+          <li><strong>Tickets and prizes are not money.</strong> They are earned by playing and can never be bought. Claw tries are never sold.</li>
+          <li><strong>Purchases go through Apple</strong>, behind a grown-up check. We never see a name, card or Apple Account.</li>
+          <li><strong>No accounts of ours. No ads. No tracking. No analytics. No permissions.</strong></li>
         </ul>
       </div>
     </aside>
@@ -40,64 +40,69 @@
     <article class="document-content">
       <section>
         <h2>What the app stores, and where</h2>
-        <p>All of it is on the phone, in the app's own local settings storage (iOS <code>UserDefaults</code>). None of it is sent to us. No names, ages or other personal details are asked for or stored.</p>
-        <p><strong>iCloud.</strong> The game progress rows below (score, coins, stars, levels reached, stories seen, Easy/Hard) are also copied to Apple's iCloud key-value storage in <strong>your own</strong> iCloud account, so another device on the same Apple ID carries on where you left off (<code>SquishySkyPatrol/Game/CloudSync.swift</code>). Apple stores it under its own privacy policy; we cannot read it. Purchases are not in it (Apple's Restore Purchases brings those back), nor is the Game Center or sound setting.</p>
+        <p>Everything is on the phone, in the app's own settings storage. No names, ages or other personal details are asked for or stored.</p>
         <table>
           <thead>
-            <tr><th>What</th><th>Why</th><th>Where in the code</th></tr>
+            <tr><th>What</th><th>Where</th><th>Why</th></tr>
           </thead>
           <tbody>
-            <tr><td>Best score</td><td>To show your best and post it to Game Center</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
-            <tr><td>Jelly coins collected</td><td>To show your coin total</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
-            <tr><td>Stars earned on each level (best result)</td><td>To show your stars on the map</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
-            <tr><td>Highest level unlocked</td><td>So the next level stays open</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
-            <tr><td>Whether the opening story has been seen</td><td>To skip it on the next launch</td><td><code>SquishySkyPatrol/Game/GameModel.swift</code></td></tr>
-            <tr><td>What Game Center last did (signed in or not, last score sent)</td><td>So a problem can be read off the phone</td><td><code>SquishySkyPatrol/Game/GameCenter.swift</code></td></tr>
-            <tr><td>Sound on/off</td><td>To remember the sound setting</td><td><code>SquishyKit/Sources/SquishyKit/Game/SoundKit.swift</code></td></tr>
+            <tr><td>Sky Patrol and Splat Defense progress: levels reached, stars, best scores, coins, Easy/Hard, stories already seen</td><td>This phone, and your own iCloud</td><td>Keep your place, on every iPhone you use</td></tr>
+            <tr><td>Tickets earned and spent, prizes owned, the daily reward streak</td><td>This phone only</td><td>The prize counter and the daily reward</td></tr>
+            <tr><td>Dots won at the claw, how My Room is laid out, Pip's outfit</td><td>This phone only</td><td>Show your room and your Pip</td></tr>
+            <tr><td>Which game lands are unlocked</td><td>This phone only</td><td>Open what was bought (Restore Purchases asks Apple again)</td></tr>
+            <tr><td>Sound on/off and other settings</td><td>This phone only</td><td>Remember them</td></tr>
           </tbody>
         </table>
+        <p><strong>iCloud</strong> is Apple's key-value storage in <strong>your own</strong> account. Apple keeps it under its own privacy policy; we cannot read it. Purchases, tickets, prizes and My Room are not in it.</p>
       </section>
 
       <section>
         <h2>Game Center</h2>
         <ul>
-          <li>At launch the app asks Apple's <strong>Game Center</strong> to sign in. This is Apple's own screen and account, not ours. It is shown at most once per launch.</li>
-          <li><strong>If you are signed in</strong>, the app sends one number — your best score — to the game's Game Center leaderboard. Apple shows it with your Game Center nickname.</li>
-          <li><strong>If you say no</strong>, nothing is sent and the game plays exactly the same.</li>
-          <li>The app uses the leaderboard only: no friends list, no invites, no chat, no multiplayer.</li>
-          <li>Game Center is run by Apple under Apple's privacy policy. We do not receive your Apple ID, email or contacts. A grown-up can turn Game Center off in iOS Settings › Game Center, or limit it with Screen Time.</li>
+          <li>The app asks Apple's <strong>Game Center</strong> to sign in. This is Apple's own screen and account, not ours.</li>
+          <li><strong>If you are signed in</strong>, the app sends one number per game — your best score in Sky Patrol and in Splat Defense — to that game's leaderboard. Apple shows it with your Game Center nickname.</li>
+          <li><strong>If you say no</strong>, nothing is sent and every game plays the same.</li>
+          <li>Leaderboards only: no friends list, no invites, no chat, no multiplayer.</li>
+          <li>A grown-up can turn Game Center off in iOS Settings › Game Center, or limit it with Screen Time.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Tickets, prizes and purchases</h2>
+        <ul>
+          <li><strong>Tickets</strong> come from stars earned in the games. They buy prizes for My Room at the prize counter. They have no money value and cannot be bought.</li>
+          <li><strong>The claw</strong> is free to play. Whether a grab holds is chance, as in a real claw machine, but nothing is paid for and tries are never sold.</li>
+          <li><strong>Purchases:</strong> the first levels of every game land are free. A one-time $0.99 purchase per land opens the rest. Each purchase sits behind a grown-up check and goes through Apple's own purchase sheet. The app keeps only "this land is open".</li>
         </ul>
       </section>
 
       <section>
         <h2>What the app does NOT do</h2>
         <ul>
-          <li><strong>No networking code of its own.</strong> Apart from the Game Center score and the iCloud progress copy above, both sent by iOS to Apple, nothing is uploaded, downloaded, synced or backed up by the app. (Your own iCloud device backup may include the app's local data, under Apple's terms, like any other app.)</li>
+          <li><strong>No networking code of its own.</strong> Apart from Game Center scores and the iCloud progress copy, both sent by iOS to Apple, nothing is uploaded or downloaded by the app.</li>
           <li><strong>No third-party code.</strong> No advertising, analytics, crash-reporting or social SDKs.</li>
           <li><strong>No permissions.</strong> The app never asks for the camera, microphone, photos, location, contacts or notifications.</li>
-          <li><strong>Purchases</strong> use Apple's StoreKit (<code>SquishySkyPatrol/Game/LandStore.swift</code>), behind a grown-up check. Apple processes them; the app keeps only "this land is open" on the phone. Restore Purchases asks Apple again.</li>
-          <li><strong>No web views, no links out of the app.</strong></li>
-          <li><strong>Sound effects</strong> are generated inside the app (no audio files, no streaming) and respect the phone's silent switch.</li>
+          <li><strong>No web views and no links out of the app.</strong></li>
         </ul>
       </section>
 
       <section>
         <h2>Children</h2>
-        <p>Squishy Sky Patrol is made for children. We collect no personal information from children (COPPA) or from anyone else. The only things that can leave the phone are the best score to Apple's Game Center and the game progress to the family's own iCloud, both controlled by a grown-up in iOS Settings. A parent or guardian can clear everything the app remembers on a device by deleting the app; the iCloud copy is removed in iOS Settings › [name] › iCloud › Manage Storage.</p>
+        <p>Pip's Arcade is made for children aged 9 to 11. We collect no personal information from children (COPPA) or from anyone else. The only things that can leave the phone are best scores to Apple's Game Center and game progress to the family's own iCloud, both controlled by a grown-up in iOS Settings. Deleting the app clears everything it keeps on the phone.</p>
       </section>
 
       <section>
         <h2>Your choices</h2>
         <ul>
-          <li><strong>Keep the score on the phone:</strong> decline the Game Center sign-in, or turn Game Center off in iOS Settings.</li>
-          <li><strong>Keep progress on one device:</strong> turn iCloud off for Sky Patrol in iOS Settings › [name] › iCloud.</li>
-          <li><strong>Forget everything:</strong> delete the app (and its iCloud copy, above). There is no server-side copy of ours to ask us to delete, because there is none. A score already on the Game Center leaderboard is Apple's; manage it in iOS Settings › Game Center.</li>
+          <li><strong>Keep scores on the phone:</strong> decline the Game Center sign-in, or turn Game Center off in iOS Settings.</li>
+          <li><strong>Keep progress on one phone:</strong> turn iCloud off for Pip's Arcade in iOS Settings › [your name] › iCloud.</li>
+          <li><strong>Forget everything:</strong> delete the app, and its iCloud copy in iOS Settings › [your name] › iCloud › Manage Storage. We hold no copy to delete. A score already on a Game Center leaderboard is Apple's; manage it in iOS Settings › Game Center.</li>
         </ul>
       </section>
 
       <section>
         <h2>Changes</h2>
-        <p>If a future version ever sends anything else off the device, this policy will change first and the change will be described in the app's release notes.</p>
+        <p>If a future version ever sends anything else off the phone, this policy will change first and the release notes will say so.</p>
       </section>
 
       <section>
@@ -109,7 +114,7 @@
   </main>
 
   <footer>
-    <p>© 2026 Thomas M Brown. Squishy Sky Patrol.</p>
+    <p>© 2026 Thomas M Brown. Pip's Arcade.</p>
     <p><a href="/sky-patrol/support/">Support</a> · <a href="/sky-patrol/privacy/">Privacy</a> · <a href="/">Legal home</a></p>
   </footer>
 </body>
