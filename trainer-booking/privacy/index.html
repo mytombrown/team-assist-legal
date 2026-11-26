@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Trainer Booking privacy policy. Schedules and bookings are stored in Apple's iCloud so a trainer and their families can see them. No ads, no tracking, no servers of ours.">
+  <meta name="description" content="Trainer Booking privacy policy. Schedules and bookings are stored on the Trainer Booking server so trainers and families can see them. No ads, no tracking, no analytics.">
   <title>Privacy Policy | Trainer Booking</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="stylesheet" href="/styles.css">
@@ -22,13 +22,13 @@
     <aside class="document-summary" aria-label="Policy summary">
       <p class="eyebrow">Privacy policy</p>
       <h1>Trainer Booking — Privacy Policy</h1>
-      <p>Effective November 24, 2026. Applies to the Trainer Booking app for iPhone (<code>com.mytombrown.trainerbook</code>) by Tom Brown.</p>
+      <p>Effective November 26, 2026. Applies to the Trainer Booking app for iPhone (<code>com.mytombrown.trainerbook</code>) and the Trainer Booking parent app for Android, by Tom Brown.</p>
       <div class="summary-note">
         <strong>The short version</strong>
         <ul>
-          <li><strong>We run no servers.</strong> Schedules and bookings are kept in Apple's iCloud (CloudKit) so a trainer and their families can see them.</li>
+          <li><strong>Schedules and bookings are kept on our server</strong> (trainerbook-api.mytombrown.com), so a trainer and their families can see them on iPhone and Android.</li>
           <li><strong>A booking is shared with the trainer you book.</strong> The names and contact details you type go to that trainer, nobody else.</li>
-          <li><strong>No ads, no tracking, no analytics, no payments.</strong></li>
+          <li><strong>No accounts, no ads, no tracking, no analytics.</strong> Trainers pay through Apple; we never see card details.</li>
         </ul>
       </div>
     </aside>
@@ -41,13 +41,35 @@
             <tr><th>What</th><th>Where</th><th>Who can see it</th></tr>
           </thead>
           <tbody>
-            <tr><td>Trainer's name, sessions, events, venues, prices, schedule</td><td>Apple's iCloud (CloudKit public database), under the trainer's code</td><td>Anyone who has the trainer's code</td></tr>
-            <tr><td>Bookings: athlete's name, the session and time</td><td>Apple's iCloud, under the trainer's code</td><td>The trainer, and the family that booked</td></tr>
-            <tr><td>Event and 1-on-1 requests: athlete's name and age, parent's name, phone, email, message</td><td>Apple's iCloud, under the trainer's code</td><td>The trainer the request is sent to</td></tr>
+            <tr><td>Trainer's name, phone, email, sessions, events, venues, prices, schedule</td><td>Our server, under the trainer's code</td><td>Anyone who has the trainer's code</td></tr>
+            <tr><td>Bookings: athlete's name, the session and time</td><td>Our server, under the trainer's code</td><td>The trainer, and the family that booked</td></tr>
+            <tr><td>Event and 1-on-1 requests: athlete's name and age, parent's name, phone, email, message</td><td>Our server, under the trainer's code</td><td>The trainer the request is sent to</td></tr>
+            <tr><td>Trainer's plan: which plan, free month or paid, paid-until date</td><td>Our server, with the trainer's record</td><td>The trainer; the app uses it to open or close booking</td></tr>
+            <tr><td>A random device ID and a push token, so alerts reach the right phone</td><td>Our server</td><td>Only the server</td></tr>
+            <tr><td>A record of each alert sent (its text, when, whether it arrived)</td><td>Our server</td><td>Only us, to fix alerts that fail</td></tr>
             <tr><td>Your own settings, venue history, saved codes</td><td>This device only</td><td>Only you</td></tr>
           </tbody>
         </table>
-        <p>iCloud is Apple's service. Records are reached only by the trainer's code; there is no public list or search of trainers or athletes.</p>
+        <p>There are no accounts and no sign-in. A phone gets a random ID the first time it opens the app; it is not tied to your name, Apple ID or Google account. Records are reached only by the trainer's code; there is no public list or search of trainers or athletes.</p>
+      </section>
+
+      <section>
+        <h2>Our server</h2>
+        <ul>
+          <li>Runs on Amazon Web Services (Lightsail) in the United States. All traffic is encrypted (HTTPS).</li>
+          <li>Like any web server, it sees your phone's IP address when it connects. We do not use it to identify you.</li>
+          <li>It keeps a short technical log: which request, when, and whether it worked.</li>
+          <li>A backup of the data is made each night. The newest 14 are kept; older ones are deleted.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Subscriptions</h2>
+        <ul>
+          <li>Trainers subscribe in the iPhone app through Apple's in-app purchase. Apple handles the payment; we never see card or billing details.</li>
+          <li>Parents never pay and never see a subscription.</li>
+          <li>Terms of Use: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's standard license agreement (EULA)</a>.</li>
+        </ul>
       </section>
 
       <section>
@@ -60,7 +82,8 @@
       <section>
         <h2>Notifications</h2>
         <ul>
-          <li>Trainers get a notification when a session is booked or cancelled, or a request comes in. Apple's push service delivers it.</li>
+          <li>Trainers get an alert when a session is booked or cancelled, or a request comes in. Parents get an alert when a request is answered or an athlete is taken off a session.</li>
+          <li>The alert text (for example the athlete's name and the session) is passed to Apple's push service for iPhone, or Google's Firebase Cloud Messaging for Android, to deliver it.</li>
         </ul>
       </section>
 
@@ -74,10 +97,9 @@
       <section>
         <h2>What the app does NOT do</h2>
         <ul>
-          <li><strong>No servers of ours.</strong></li>
           <li><strong>No third-party tracking code.</strong> No advertising, analytics or crash-reporting SDKs.</li>
-          <li><strong>No payments.</strong> Prices are shown only; any payment happens between you and the trainer.</li>
-          <li><strong>No selling or sharing of data</strong> with anyone.</li>
+          <li><strong>No payments between parents and trainers.</strong> Prices are shown only; any payment happens between you and the trainer.</li>
+          <li><strong>No selling or sharing of data</strong> with anyone, beyond the delivery services named above.</li>
         </ul>
       </section>
 
@@ -89,9 +111,9 @@
       <section>
         <h2>Your choices</h2>
         <ul>
-          <li><strong>Cancel a booking</strong> in the app; it is removed from iCloud.</li>
+          <li><strong>Cancel a booking</strong> in the app; it is deleted from our server.</li>
           <li><strong>Camera and notifications:</strong> turn them off any time in Settings.</li>
-          <li><strong>Remove anything else</strong> (a trainer's schedule, a request): email us and we will delete it.</li>
+          <li><strong>Delete anything else</strong> (a trainer's schedule, a request, a phone's alert history): email us and we will delete it. Copies in the nightly backups are gone within 14 days.</li>
         </ul>
       </section>
 
@@ -110,7 +132,7 @@
 
   <footer>
     <p>© 2026 Thomas M Brown. Trainer Booking.</p>
-    <p><a href="/trainer-booking/privacy/">Privacy</a> ·<a href="/">Legal home</a></p>
+    <p><a href="/trainer-booking/privacy/">Privacy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a> · <a href="/">Legal home</a></p>
   </footer>
 </body>
 </html>
